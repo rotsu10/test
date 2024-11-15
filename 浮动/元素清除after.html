@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 清除浮动后 父级会根据子盒子大小自动检测高度  */
+        .clearfix::after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        .clearfix {
+            *zoom: 1;
+        }
+
+        .box {
+            background-color: red;
+        }
+
+        .damao {
+            float: left;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+        }
+
+        .ermao {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .footer {
+            height: 200px;
+            background-color: black;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        /* 新加元素必须为块级元素 */
+    </style>
+</head>
+
+<body>
+    <div class="box clearfix">
+        <div class="damao">damao</div>
+        <div class="ermao">ermao</div>
+        <div class="clear"></div>
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>
