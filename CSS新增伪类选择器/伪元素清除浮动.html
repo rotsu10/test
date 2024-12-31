@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix::before,
+        .clearfix:after {
+            content: "";
+            display: block;
+            /* 插入元素必须是块级 */
+            height: 0;
+            /* 不要看见这个元素 */
+            clear: both;
+            /* 清除浮动 */
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
